@@ -1,0 +1,3 @@
+INSERT INTO bus (id,bus_name,bus_type,active,created_at,modified_at) VALUES (1,"Super Fast","Express Service - 50 Seater","Y",'2020-06-20 14:31:00','2020-06-20 14:31:00');
+INSERT INTO bus (id,bus_name,bus_type,active,created_at,modified_at) VALUES (2,"Comfy One","Business Class - 30 Seater","Y",'2020-06-20 14:32:00','2020-06-20 14:32:00');
+INSERT INTO bus (id,bus_name,bus_type,active,created_at,modified_at) VALUES (3,"Economy","Ordinary Fare - 85 Seater","Y",'2020-06-20 14:32:00','2020-06-20 14:32:00');
