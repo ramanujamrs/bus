@@ -5,13 +5,11 @@
 
 package com.ramanujamrs.busorama.bus.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
+@Table(name = "bus")
 public class Bus {
 
     @Id

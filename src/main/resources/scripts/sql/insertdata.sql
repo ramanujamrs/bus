@@ -1,3 +1,14 @@
-INSERT INTO bus (id,bus_name,bus_type,active,created_at,modified_at) VALUES (1,"Super Fast","Express Service - 50 Seater","Y",'2020-06-20 14:31:00','2020-06-20 14:31:00');
-INSERT INTO bus (id,bus_name,bus_type,active,created_at,modified_at) VALUES (2,"Comfy One","Business Class - 30 Seater","Y",'2020-06-20 14:32:00','2020-06-20 14:32:00');
-INSERT INTO bus (id,bus_name,bus_type,active,created_at,modified_at) VALUES (3,"Economy","Ordinary Fare - 85 Seater","Y",'2020-06-20 14:32:00','2020-06-20 14:32:00');
+#route
+INSERT INTO route(route_name,route_description,active) VALUES('DFW-HSB','DFW to Harrisburgh','y');
+INSERT INTO route(route_name,route_description,active) VALUES('DFW-MEM','DFW to Memphis','y');
+INSERT INTO route(route_name,route_description,active) VALUES('DFW-HOU','DFW to Houston','y');
+
+#bus
+INSERT INTO bus (bus_name,bus_type,active,route_id) VALUES ("Super Fast","Express Service - 50 Seater",'y',1);
+INSERT INTO bus (bus_name,bus_type,active,route_id) VALUES ("Comfy One","Business Class - 30 Seater",'y',1);
+
+INSERT INTO bus (bus_name,bus_type,active,route_id) VALUES ("Economy","Ordinary Fare - 85 Seater",'y',2);
+
+INSERT INTO bus (bus_name,bus_type,active,route_id) VALUES ("Super Fast","Express Service - 50 Seater",'y',3);
+INSERT INTO bus (bus_name,bus_type,active,route_id) VALUES ("Comfy One","Business Class - 30 Seater",'y',3);
+INSERT INTO bus (bus_name,bus_type,active,route_id) VALUES ("Economy","Ordinary Fare - 85 Seater",'y',3);
