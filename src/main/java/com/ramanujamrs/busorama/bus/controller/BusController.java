@@ -16,6 +16,9 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @RestController
 @RequestMapping(value = "/api/v1/bus")
 public class BusController
@@ -23,9 +26,12 @@ public class BusController
     @Resource(name="busService")
     private BusService busService;
 
+    private static final Logger LOGGER=LoggerFactory.getLogger(BusController.class);
+
     @GetMapping("/all")
     public List<Bus> getBus()
     {
+        LOGGER.info("Execution of Simple log statement with inputs");
         List<Bus> busList = new ArrayList<>();
         busList = busService.getBus();
         return busList;

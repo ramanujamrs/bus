@@ -16,7 +16,7 @@
 
 - **JDK 14.01**
 - **Spring Boot** - 2.2.6
-- **MySQL Database** : 5.6
+- **MySQL Database** : 8.0
 - **Maven**
 - **JPA**
 - **Spring Cloud**

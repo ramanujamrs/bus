@@ -1,6 +1,6 @@
 /*
  * @author Ramanujam Srinivasan
- * @created_on 06-20-2020
+ * @created_on 06-21-2020
  */
 
 package com.ramanujamrs.busorama.bus.model;
@@ -12,25 +12,26 @@ import javax.persistence.Id;
 import java.sql.Timestamp;
 
 @Entity
-public class Bus {
-
+public class Route
+{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String busName;
-    private String busType;
+    private String routeName;
+    private String routeDescription;
     private String active;
     private Timestamp createdAt;
     private Timestamp modifiedAt;
 
-    public Bus() {
+    public Route()
+    {
         super();
     }
 
-    public Bus(Long id, String busName, String busType, String active, Timestamp createdAt, Timestamp modifiedAt) {
+    public Route(Long id, String routeName, String routeDescription, String active, Timestamp createdAt, Timestamp modifiedAt) {
         this.id = id;
-        this.busName = busName;
-        this.busType = busType;
+        this.routeName = routeName;
+        this.routeDescription = routeDescription;
         this.active = active;
         this.createdAt = createdAt;
         this.modifiedAt = modifiedAt;
@@ -44,20 +45,20 @@ public class Bus {
         this.id = id;
     }
 
-    public String getBusName() {
-        return busName;
+    public String getRouteName() {
+        return routeName;
     }
 
-    public void setBusName(String busName) {
-        this.busName = busName;
+    public void setRouteName(String routeName) {
+        this.routeName = routeName;
     }
 
-    public String getBusType() {
-        return busType;
+    public String getRouteDescription() {
+        return routeDescription;
     }
 
-    public void setBusType(String busType) {
-        this.busType = busType;
+    public void setRouteDescription(String routeDescription) {
+        this.routeDescription = routeDescription;
     }
 
     public String getActive() {
@@ -83,5 +84,4 @@ public class Bus {
     public void setModifiedAt(Timestamp modifiedAt) {
         this.modifiedAt = modifiedAt;
     }
-
 }
