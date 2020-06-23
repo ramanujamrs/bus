@@ -5,6 +5,10 @@
 
 package com.ramanujamrs.busorama.bus.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -17,6 +21,12 @@ public class Bus {
     private Long id;
     private String busName;
     private String busType;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "route_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private Route route;
+
     private String active;
     private Timestamp createdAt;
     private Timestamp modifiedAt;
@@ -58,6 +68,14 @@ public class Bus {
         this.busType = busType;
     }
 
+    public Route getRoute() {
+        return route;
+    }
+
+    public void setRoute(Route route) {
+        this.route = route;
+    }
+
     public String getActive() {
         return active;
     }
@@ -81,5 +99,4 @@ public class Bus {
     public void setModifiedAt(Timestamp modifiedAt) {
         this.modifiedAt = modifiedAt;
     }
-
 }
